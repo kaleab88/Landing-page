@@ -1,4 +1,3 @@
-
 body {
     margin: 0;
     padding: 0;
@@ -10,7 +9,7 @@ body {
     display: flex;
     flex-direction: column;
     padding: 0 40px;
-    flex:1 1 auto;
+    flex: 1 1 auto;
 }
 
 .header {
@@ -18,9 +17,10 @@ body {
     justify-content: center;
     align-items: flex-start;
 }
+
 .center {
     display: flex;
-    justify-content:center;
+    justify-content: center;
     gap: 10px;
 }
 
@@ -47,7 +47,8 @@ h1 {
 }
 
 a,
-.subtext, p {
+.subtext,
+p {
     color: #E5E7EB;
     font-size: 18px;
 }
@@ -59,10 +60,12 @@ button {
     font-weight: 700;
     color: #E5E7EB;
 }
+
 .hero button {
     border: 2px solid #3882f6;
     padding: 15px;
 }
+
 img {
     width: 200px;
 }
@@ -72,12 +75,13 @@ img {
     justify-content: center;
 }
 
- h2 {
+h2 {
     font-size: 36px;
     font-weight: 900;
-    color:#1f2937;
+    color: #1f2937;
     text-align: center;
 }
+
 div.project-box {
     background-color: #ffffff;
     margin: 15px;
@@ -88,31 +92,36 @@ div.project-box {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
 }
+
 .project-box h3 {
-  font-size: 1.5em;
-  margin-bottom: 10px;
-  font-weight: 800;
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    font-weight: 800;
 }
 
 .project-box p {
-  font-size: 18px;
-  color:#666;
+    font-size: 18px;
+    color: #666;
 }
+
 .aboutme {
     background-color: #E5E7EB;
     text-align: center;
     padding: 20px;
 }
+
 .aboutme h2 {
-    margin:0;
+    margin: 0;
 }
+
 .aboutme p {
-    color:#1f2937;
+    color: #1f2937;
     font-style: italic;
     font-size: 36px;
     font-weight: 300;
     margin: 0;
 }
+
 div.contactme {
     display: flex;
     background-color: #007bff;
@@ -126,11 +135,13 @@ div.contactme {
     flex-basis: auto;
     min-width: 200px;
 }
- button.contact {
+
+button.contact {
     border: 2px solid #E5E7EB;
     padding: 15px;
     height: 46px;
 }
+
 .footer {
     background-color: #1f2937;
     padding: 10px;
