@@ -53,7 +53,7 @@ https://kaleab88.github.io/Landing-page/
 
 1. Clone this repository  
    ```
-   git clone https://github.com/your-github-username/your-repo-name.git
+   git clone https://github.com/[kaleab88.github.io/Landing-page.git]
    ```  
 2. Navigate into the project folder  
    ```
