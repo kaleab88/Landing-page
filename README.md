@@ -1,107 +1,107 @@
-# README.md
+# 🌐 Kaleab’s Personal Portfolio Landing Page
 
----
+A minimalist and responsive **personal portfolio website** built entirely with **HTML and CSS**.  
+It showcases my background as an **aspiring Software Engineer, C++ developer, and web enthusiast** — highlighting my projects, experience, and contact information.
 
-# Kaleab’s Personal Portfolio Landing Page
+![License](https://img.shields.io/badge/license-MIT-brightgreen) ![Version](https://img.shields.io/badge/version-1.0.0-blue)
 
-This is the landing page I built as part of the Odin Project Foundations course. It showcases my skills as a beginner C++ developer and web enthusiast using only HTML and CSS.
+## 🚀 Demo
 
----
+🔗 **Live Demo:** [kaleab88.github.io/Landing-page](https://kaleab88.github.io/Landing-page/)
 
-## Table of Contents
+_(Make sure your GitHub Pages is enabled under repo settings → Pages → Branch: main)_
 
-- [Overview](#overview)  
-- [Demo](#demo)  
-- [Getting Started](#getting-started)  
-- [Project Structure](#project-structure)  
-- [Features](#features)  
-- [Credits](#credits)    
-- [Author](#author)  
-
----
-
-## Overview
-
-This project implements a simple, single-page portfolio layout with five sections:  
-1. Hero  
-2. Featured Projects  
-3. About Me  
-4. Call to Action  
-5. Footer  
-
-All styling is done in `style.css`, and no JavaScript is used.
-
----
-
-## Demo
-
-You can view the live version on GitHub Pages once you set it up:  
-```
-https://kaleab88.github.io/Landing-page/
-```
-
----
-
-## Getting Started
+## 🛠️ Getting Started
 
 ### Prerequisites
 
-- A modern web browser (Chrome, Firefox, Edge, etc.)  
-- Git (optional, but recommended for cloning the repo)
+- A modern browser (Chrome, Firefox, Edge, etc.)
+- Optional: Git (to clone and manage version control)
 
 ### Installation
 
-1. Clone this repository  
+1. Clone this repository
+
+   ```bash
+   git clone https://github.com/kaleab88/Landing-page.git
    ```
-   git clone https://github.com/[kaleab88.github.io/Landing-page.git]
-   ```  
-2. Navigate into the project folder  
-   ```
-   cd your-repo-name
-   ```  
-3. Open `index.html` in your browser  
-   ```
+
+   ### 🛠️ How to Run Locally
+
+1. **Navigate into the folder**
+
+   ```bash
+   cd Landing-page
+
    open index.html
-   ```  
-   or simply double-click the file.
+   ```
 
----
+📁 Project Structure
 
-## Project Structure
+├── index.html # Main website file  
+├── style.css # Styling file (light + dark mode)  
+├── /assets # Folder for images and icons  
+│ ├── 01.png # Hero section image  
+│ └── logo.svg # Portfolio logo  
+└── README.md # Project documentation
 
-```
-├── index.html       # Main HTML file
-├── style.css        # All CSS styling
-└── 01.png           # Hero section placeholder image
-```
+✨ Features
 
----
+- Fully responsive layout (works across mobile, tablet, and desktop)
+- Minimalist hero section introducing Kaleab and his specialties
+- “Featured Projects” grid showcasing real and ongoing works
+- “About Me” section describing interests and philosophy
+- Updated Contact section with:
+  - Email
+  - GitHub
+  - LinkedIn
+  - Telegram
+  - Direct “View Source” footer link
+- Built using only HTML5 & CSS3 (no frameworks, no JS)
+- Light and Dark mode themes
 
-## Features
+🎨 Design Highlights
 
-- Hero section with logo, navigation links, heading, subtext, button, and image  
-- Featured Projects section displaying three project cards  
-- About Me section with a personal introduction  
-- Call to Action section inviting visitors to get in touch  
-- Footer with reserved rights text  
+Color palette:
 
----
+- #1f2937 (dark navy)
+- #3882f6 (accent blue)
+- #f9fafb (background white)
 
-## Credits
+Typography: clean, readable, and bold headings
 
-- Hero placeholder image: sourced from Pexels/Unsplash (replace `01.png` with your own royalty-free images and update attribution here)  
-- Course guidance and layout design from The Odin Project Foundations course:  
-  https://www.theodinproject.com/courses/foundations
+Icons: SVG-based, lightweight, and responsive
 
----
+Dark Mode Support:
 
+- Automatically adjusts background and text colors
+- Social icons remain legible on both themes
 
----
+🧠 Credits
 
-## Author
+Hero and section images from Pexels and Unsplash.
 
-**Kaleab**  
-- GitHub: https://github.com/kaleab88 
-- Email: kaleabbantayehu@gmail.com 
+Inspired by The Odin Project Foundations Course.
 
-Feel free to customize any section of this README to match your GitHub username, project repo name, or personal contact details. Good luck with your Odin Project submission!
+Contact and footer section designed using real developer portfolio standards.
+
+👤 Author
+
+Kaleab Bantayehu
+💻 Aspiring Software Engineer | Problem Solver | Tech Enthusiast
+
+📫 Contact & Socials:
+
+- Email: kaleabbantayehu@gmail.com
+- GitHub: github.com/kaleab88
+- LinkedIn: linkedin.com/in/kaleab-bantayehu
+- Telegram: t.me/kaleab_bantayehu
+
+## 🤝 Contributing
+
+Contributions are welcome! Please feel free to submit a pull request or open an issue for discussion.
+
+🏁 License
+
+This project is open-source and free to use under the MIT License.
+Feel free to fork, customize, or build on top of it — attribution is appreciated.
