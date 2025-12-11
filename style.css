@@ -335,3 +335,266 @@ body {
         max-width: 100%;
     }
 }
+/* Additional mobile-only responsive fixes (ONLY for max-width:768px) */
+@media (max-width: 768px) {
+    /* Prevent horizontal scrolling on small devices */
+    html, body {
+        overflow-x: hidden;
+    }
+
+    /* Navigation: prepare for a top-right toggle button and a vertical menu.
+         No desktop styles are changed; these rules apply only on small screens. */
+    .nav {
+        position: relative;
+        align-items: center;
+        padding-right: 3rem; /* room for the toggle button */
+    }
+
+    /* Toggle (hamburger) styling using the checkbox + label pattern.
+         The raw checkbox is hidden in HTML; the label is shown on mobile only. */
+    .nav-toggle-label {
+        display: block; /* visible on mobile */
+        position: absolute;
+        top: 50%;
+        right: 1rem;
+        transform: translateY(-50%);
+        width: 32px;
+        height: 32px;
+        cursor: pointer;
+        z-index: 50;
+    }
+
+    /* Visually hide the checkbox itself (kept in HTML for state) */
+    .nav-toggle {
+        position: absolute;
+        left: -9999px;
+    }
+
+    /* Hamburger lines */
+    .hamburger,
+    .hamburger::before,
+    .hamburger::after {
+        display: block;
+        width: 32px;
+        height: 3px;
+        background: #E5E7EB;
+        border-radius: 2px;
+        transition: transform 250ms ease, opacity 200ms ease;
+    }
+
+    .hamburger {
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .hamburger::before,
+    .hamburger::after {
+        content: '';
+        position: absolute;
+        left: 0;
+    }
+
+    .hamburger::before {
+        top: -9px;
+    }
+
+    .hamburger::after {
+        top: 9px;
+    }
+
+    /* When checked, animate to an X (optional subtle transform) */
+    .nav-toggle:checked + .nav-toggle-label .hamburger {
+        background: transparent;
+    }
+
+    .nav-toggle:checked + .nav-toggle-label .hamburger::before {
+        transform: translateY(9px) rotate(45deg);
+    }
+
+    .nav-toggle:checked + .nav-toggle-label .hamburger::after {
+        transform: translateY(-9px) rotate(-45deg);
+    }
+
+    /* Mobile menu: make it occupy full width and stack vertically.
+         Keep it in the flow so it pushes content down (no overlap). */
+    .nav-links {
+        display: none; /* hidden by default on mobile */
+        width: 100%;
+        margin-top: 0.75rem;
+        padding: 0.75rem 1rem;
+        background: #1f2937;
+        border-radius: 8px;
+        box-sizing: border-box;
+        flex-direction: column;
+        gap: 0.5rem;
+        list-style: none;
+        align-items: center;
+    }
+
+    .nav-links a {
+        color: #E5E7EB;
+        text-decoration: none;
+        padding: 0.6rem 0.75rem;
+        display: block;
+        width: 100%;
+        text-align: center;
+        box-sizing: border-box;
+    }
+
+    /* Show nav when checkbox is checked */
+    .nav-toggle:checked ~ .nav-links {
+        display: flex;
+        animation: slideDown 260ms ease both, fadeIn 200ms ease both;
+    }
+
+    /* Make .nav-links visible when JS adds .active */
+    .nav-links.active {
+        display: flex !important;
+        flex-direction: column;
+        width: 100%;
+        margin-top: 0.75rem;
+        padding: 0.75rem 1rem;
+        background: #1f2937;
+        box-sizing: border-box;
+        align-items: center;
+        animation: slideDown 260ms ease both, fadeIn 200ms ease both;
+    }
+
+    /* Visible hamburger/menu toggle (mobile only). Overrides inline display:none via !important */
+        .menu-toggle {
+                display: flex !important;
+                position: absolute;
+                top: 50%;
+                right: 1rem;
+                transform: translateY(-50%);
+                font-size: 30px;
+                background: transparent;
+                border: 0;
+                color: #E5E7EB;
+                cursor: pointer;
+                z-index: 1000;
+                width: 44px;
+                height: 44px;
+                align-items: center;
+                justify-content: center;
+                padding: 0;
+            }
+
+    /* Ensure hamburger inside the button matches visual spec */
+    .menu-toggle .hamburger,
+    .menu-toggle .hamburger::before,
+    .menu-toggle .hamburger::after {
+        width: 28px;
+        height: 3px;
+        background: #E5E7EB;
+        border-radius: 2px;
+    }
+
+    .menu-toggle.open .hamburger {
+        background: transparent;
+    }
+
+    .menu-toggle.open .hamburger::before {
+        transform: translateY(9px) rotate(45deg);
+    }
+
+    .menu-toggle.open .hamburger::after {
+        transform: translateY(-9px) rotate(-45deg);
+    }
+
+    /* Keyframes for slide/fade */
+    @keyframes slideDown {
+        from { transform: translateY(-6px); }
+        to { transform: translateY(0); }
+    }
+
+    @keyframes fadeIn {
+        from { opacity: 0; }
+        to { opacity: 1; }
+    }
+
+    /* Ensure logo stays visible and doesn't get overlapped by the menu */
+    .logo-img,
+    .logo {
+        z-index: 45;
+    }
+
+    /* Stack main sections vertically and center text on mobile only */
+    .hero,
+    .projects,
+    .about,
+    .contact,
+    .resume-section {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    .hero { /* ensure the hero keeps the avatar size and position */
+        justify-content: center;
+    }
+
+    /* Keep avatar dimensions unchanged (explicitly restated for mobile) */
+    .hero-img img {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        object-fit: cover;
+    }
+
+    /* Projects grid becomes single column with centered cards */
+    .project-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        max-width: 100%;
+    }
+
+    .project-card {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    /* Resume: stack left/right and center content */
+    .resume-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .resume-left,
+    .resume-right {
+        max-width: 100%;
+        width: 100%;
+    }
+
+    /* Contact: ensure links wrap and center without overflow */
+    .contact-links {
+        justify-content: center;
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+        box-sizing: border-box;
+    }
+
+    .contact-btn,
+    .social-link {
+        white-space: nowrap;
+    }
+
+    /* Footer: prevent overflow on small screens */
+    .footer {
+        padding-left: 1rem;
+        padding-right: 1rem;
+        box-sizing: border-box;
+    }
+
+    /* Make sure container elements don't exceed viewport width */
+    .container,
+    .project-grid,
+    .resume-container {
+        max-width: 100%;
+    }
+}
+
+
